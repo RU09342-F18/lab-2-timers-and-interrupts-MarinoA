@@ -10,4 +10,10 @@ main.c
 README.txt
 Also required: msp430.h
 ###############################################
-Description 
+The purpose of this program is to enable an LED when the button is pressed. 
+The program sets an LED pin as output and then a switch pin as the input. Interrupt 
+and a pull up resistor also need to be enabled on the switch pin. The interrupt service 
+routine checks the port 1 vector for a button press, and toggles the LED when this event 
+occurs. The interrupt flag is also cleared so that the routine can be used again for 
+subsequent button presses. The input pin for the G2553 is P1.3, while the output pin is 
+P1.0. For the F5529, the input is P1.1 and the output is P1.0. 
