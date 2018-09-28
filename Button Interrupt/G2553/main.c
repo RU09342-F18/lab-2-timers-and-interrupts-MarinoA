@@ -33,7 +33,7 @@ int main(void)
   P1IES |= BIT3;                            // P1.3 Hi/lo edge
   P1REN |= BIT3;                            // Enable Pull Up on SW2 (P1.3)
   P1IFG &= ~BIT3;                           // P1.3 IFG cleared
-                                            //BIT3 on Port 1 can be used as Switch2
+                                        
 
 
   __bis_SR_register(LPM4_bits + GIE);       // Enter LPM4 w/interrupt
